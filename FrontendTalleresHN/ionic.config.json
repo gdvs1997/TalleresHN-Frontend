@@ -1,0 +1,7 @@
+{
+  "name": "FrontendTalleresHN",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
