@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/tabs/citas" 
+        text="Regresar" 
+        color="primary"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Gestionar Cita</ion-title>
+    
+    <!--<ion-buttons slot="end">
+      <ion-button color="warning" (click)="salir()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>-->
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form #formularioCitas="ngForm" (ngSubmit)="gestionarCita( formularioCitas )">
+
+    <ion-list-header>
+      <ion-label>Formulario valido: {{ formularioCitas.valid }}</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Empresa</ion-label>
+      <ion-select ok-text="Ok" cancel-text="Cancelar" placeholder="Seleccione una opcion" 
+                  [(ngModel)]=" infoCita.EmpresaId " name="EmpresaId" required>
+        <ion-select-option value="1">Taller Zuko</ion-select-option>
+        <ion-select-option value="2">Taller Boli</ion-select-option>
+        <ion-select-option value="3">Carwash Osman</ion-select-option>
+        <ion-select-option value="4">Carwash La Union</ion-select-option>
+        <ion-select-option value="5">Taller Artica</ion-select-option>
+        <ion-select-option value="6">Taller Suazo</ion-select-option>
+        <ion-select-option value="7">Taller Marvin</ion-select-option>
+        <ion-select-option value="8">Carwash F&F</ion-select-option>
+        <ion-select-option value="9">Carwash El Tico</ion-select-option>
+        <ion-select-option value="10">Carwash El Zurdo</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Servicio</ion-label>
+      <ion-select ok-text="Ok" cancel-text="Cancelar" placeholder="Seleccione una opcion."
+                  [(ngModel)]=" infoCita.ServicioId " name="ServicioId" required>
+        <ion-select-option value="1">Lavado</ion-select-option>
+        <ion-select-option value="2">Lavado y Aspirado</ion-select-option>
+        <ion-select-option value="3">Revision Mecanica</ion-select-option>
+        <ion-select-option value="4">Revision de Motor</ion-select-option>
+        <ion-select-option value="5">Revision de Caja</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Vehiculo</ion-label>
+      <ion-select ok-text="Ok" cancel-text="Cancelar" placeholder="Seleccione una opcion."
+                  [(ngModel)]=" infoCita.VehiculoId " name="VehiculoId" required>
+        <ion-select-option value="1">Mazda 3 2008</ion-select-option>
+        <ion-select-option value="2">Mitsubishi Outlander 2015</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Descripcion del Problema</ion-label>
+      <ion-textarea [(ngModel)]=" infoCita.Descripcion " name="Descripcion" required></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha de reservacion</ion-label>
+      <ion-datetime display-format="DD/MM/YYYY" placeholder="Seleccione Fecha" done-text="Seleccionar"
+                    [(ngModel)]=" infoCita.Fecha " name="Fecha" required></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Hora</ion-label>
+      <ion-datetime display-format="HH:mm" placeholder="Seleccione Hora" done-text="Seleccionar" minute-values="0,15,30,45"
+                    [(ngModel)]=" infoCita.Hora " name="Hora" required>></ion-datetime>
+    </ion-item>
+
+    <!--<ion-item>
+      <ion-label position="floating">Floating Label</ion-label>
+      <ion-input type="email"
+                 name="email"
+                 [(ngModel)]="usuario.email"
+                 required></ion-input>
+    </ion-item>-->
+
+    <br />
+
+    <ion-button type="submit" expand="block" shape="round">
+      Reservar
+    </ion-button>
+
+  </form>
+
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-content>
+  <div id="container">
+    <div id="image">
+      <img src="/assets/logo2.png">
+    </div>
+    <ion-card>
+      <ion-card-content>
+        <form (ngSubmit)="login()" #fLogin="ngForm">
+          <ion-label color="dark" style="font-weight: bold;">Usuario</ion-label>
+          <ion-item>
+            <!--<ion-label style="font-weight: bold;" position="stacked">Usuario</ion-label>-->
+            <ion-input placeholder="Digite su usuario" required="true" name="userName" clearInput="true"></ion-input>
+          </ion-item>
+          <br/>
+          <ion-label color="dark" style="font-weight: bold;">Contraseña</ion-label>
+          <ion-item>
+            <!--<ion-label style="font-weight: bold;" position="stacked">Contraseña</ion-label>-->
+            <ion-input type="password" placeholder="Digite su contraseña" name="password"></ion-input>
+          </ion-item>
+          <br/>
+          <p id="labelOlvidarPass" color="light"><a href="/tabs/home">¿Olvido su usuario o contraseña?</a></p>
+          <br/>
+          <ion-button type="submit" expand="block" mode="md">Ingresar</ion-button>
+          <br/>
+          <p id="labelRegistrar">¿Primera vez que ingresa? <a href="/tabs/home">Registrate aqui</a></p>
+
+        </form>
+        
+
+      </ion-card-content>
+    </ion-card>
+    
+  </div>
+</ion-content>
