@@ -47,6 +47,7 @@ export class FormularioCitaPage implements OnInit {
         duration: 2000
       });
       toast.present();
+      this.limpiar();
 
     }
 
