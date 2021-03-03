@@ -23,4 +23,11 @@ export class LoginPage implements OnInit {
     
   }
 
+  async selectTipoUsuario() {
+   
+    this.navCtrl.navigateRoot( '/seleccionar-tipo-usuario', { animated: true } );
+    
+    
+  }
+
 }

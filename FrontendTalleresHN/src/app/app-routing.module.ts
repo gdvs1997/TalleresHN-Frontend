@@ -14,6 +14,18 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'seleccionar-tipo-usuario',
+    loadChildren: () => import('./pages/seleccionar-tipo-usuario/seleccionar-tipo-usuario.module').then( m => m.SeleccionarTipoUsuarioPageModule)
+  },
+  {
+    path: 'registro-clientes',
+    loadChildren: () => import('./pages/registro-clientes/registro-clientes.module').then( m => m.RegistroClientesPageModule)
+  },
+  {
+    path: 'registro-talleres',
+    loadChildren: () => import('./pages/registro-talleres/registro-talleres.module').then( m => m.RegistroTalleresPageModule)
   }
 ];
 @NgModule({

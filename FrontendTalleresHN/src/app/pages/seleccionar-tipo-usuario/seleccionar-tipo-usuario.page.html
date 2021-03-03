@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/"  
+        color="dark">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Que tipo de usuario eres?</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+  <div id="image">
+    <img src="/assets/logo2.png">
+  </div>
+
+  <ion-card>
+    <!--<ion-card-header>
+      <ion-card-title>Que tipo de usuario eres?</ion-card-title>
+    </ion-card-header>-->
+    <ion-card-content>
+
+      <ion-row>
+        <ion-col>
+          <ion-card color="warning" (click)="registroClientes()">
+            <ion-card-content>
+              Cliente
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card color="warning" (click)="registroTalleres()">
+            <ion-card-content>
+              Taller
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>
