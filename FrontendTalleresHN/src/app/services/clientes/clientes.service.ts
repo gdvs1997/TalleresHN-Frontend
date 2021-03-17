@@ -12,9 +12,9 @@ export class ClientesService {
 
   constructor( private http: HttpClient ) { }
 
-  createCliente( cliente: Cliente ) {
+  /*createCliente( cliente: Cliente ) {
     return new Promise( resolve => {
-      this.http.post( `${ URL }/usuario/crear`, cliente )
+      this.http.post( `${ URL }/cliente/crear`, cliente )
         .subscribe( resp => {
           console.log( resp );
           resolve( true );
@@ -23,5 +23,9 @@ export class ClientesService {
           resolve( false );
         });
     });
+  }*/
+
+  createCliente(cliente: Cliente) {
+    return this.http.post(`${ URL }/cliente/crear`, cliente);
   }
 }

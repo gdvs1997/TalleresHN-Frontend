@@ -44,9 +44,38 @@ export class RegistroClientesPage implements OnInit {
 
     } else{ 
 
-      const crear = await this.servicioClientes.createCliente( this.newCliente );
+      await this.servicioClientes.createCliente( this.newCliente )
+      .subscribe(
+        async res => {
+          console.log(res);
 
-      if ( crear ){
+          if(res['ok']){
+            const alert = await this.alertCtrl.create({
+              cssClass: 'my-custom-class',
+              header: 'Success',
+              message: res['message'],
+              buttons: ['OK']
+            });
+            await alert.present();
+            this.limpiar();
+          } else{
+            const alert = await this.alertCtrl.create({
+              cssClass: 'my-custom-class',
+              header: 'Error',
+              message: res['message'],
+              buttons: ['OK']
+            });
+            await alert.present();
+          }
+
+          
+      
+          
+        },
+        err => console.error(err)
+      )
+
+      /*if ( crear ){
 
         const alert = await this.alertCtrl.create({
           cssClass: 'my-custom-class',
@@ -70,7 +99,7 @@ export class RegistroClientesPage implements OnInit {
         await alert.present();
 
         this.navCtrl.navigateRoot( '/login', { animated: true } );
-      }
+      }*/
 
       /*const toast = await this.toastCtrl.create({
         message: 'Datos guardados correctamente.',
@@ -78,8 +107,6 @@ export class RegistroClientesPage implements OnInit {
       });
       toast.present();*/
     }
-
-    this.limpiar();
     loading.dismiss();
   }
 
