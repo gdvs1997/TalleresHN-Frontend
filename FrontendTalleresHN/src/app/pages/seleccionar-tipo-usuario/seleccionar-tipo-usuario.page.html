@@ -13,9 +13,6 @@
 <ion-content class="ion-padding">
   <br/>
   <br/>
-  <br/>
-  <br/>
-  <br/>
 
   <div id="image">
     <img src="/assets/logo2.png">
@@ -29,17 +26,27 @@
 
       <ion-row>
         <ion-col>
-          <ion-card color="warning" (click)="registroClientes()">
-            <ion-card-content>
-              Cliente
-            </ion-card-content>
-          </ion-card>
+            <ion-card color="warning" (click)="registroClientes()">
+              <div id="image">
+                <img style="width: 75px; padding-top: 15px;" src="/assets/icon/cliente.png">
+              </div>
+              <!--<ion-card-content>-->
+                <div style="height: 100%; display: flex; align-items: center; justify-content: center; font-size: large;">
+                  Cliente
+                </div>
+              <!--</ion-card-content>-->
+            </ion-card>
         </ion-col>
         <ion-col>
           <ion-card color="warning" (click)="registroTalleres()">
-            <ion-card-content>
-              Taller
-            </ion-card-content>
+            <div id="image">
+              <img style="width: 75px; padding-top: 15px;" src="/assets/icon/mecanica.png">
+            </div>
+            <!--<ion-card-content>-->
+              <div style="height: 100%; display: flex; align-items: center; justify-content: center; font-size: large;">
+                Taller
+              </div>
+            <!--</ion-card-content>-->
           </ion-card>
         </ion-col>
       </ion-row>
