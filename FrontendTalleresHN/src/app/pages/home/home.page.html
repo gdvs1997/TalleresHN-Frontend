@@ -1,17 +1,157 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+  <ion-item lines="none">
+
+    <ion-button fill="clear" color="light" slot="end">
+      <ion-icon slot="icon-only" name="notifications"></ion-icon>
+    </ion-button>
+
+    <ion-button fill="clear" color="light">
+      <ion-icon slot="icon-only" name="menu"></ion-icon>
+    </ion-button>
+    
+  </ion-item>
+
+  <ion-item lines="none">
+
+      <div>
+        <ion-row>
+          <ion-col style="padding-right: 10px;">
+            <ion-avatar style="width: 50px; height: 50px;">
+              <img src="assets/icon/profile-user.png">
+            </ion-avatar>
+          </ion-col>
+          <ion-col class="label">
+            <ion-label>
+              <h2>Hola, German</h2>
+              <h4>¿Que deseas hacer hoy?</h4>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </div>
+    
+  </ion-item>
+
+  
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Home</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="main ion-padding">
 
-  <app-explore-container name="Home page"></app-explore-container>
+    <ion-row class="ion-align-items-center ion-padding-horizontal">
+      <ion-col size="6">
+        <h5>8 Results</h5>
+      </ion-col>
+      <ion-col size="6" class="ion-text-right">
+        <ion-button fill="clear" color="dark">
+          <ion-icon slot="icon-only" name="ellipsis-horizontal"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-row style="justify-content: center; text-align: center;">
+              <ion-col>
+                <ion-label>
+                  <h2>Vehiculos</h2>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-img src="assets/icon/coche.png"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-row style="justify-content: center; text-align: center;">
+              <ion-col>
+                <ion-label>
+                  <h2>Talleres</h2>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-img src="assets/icon/mecanico.png"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-row style="justify-content: center; text-align: center;">
+              <ion-col>
+                <ion-label>
+                  <h2>Vehiculos</h2>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-img src="assets/icon/coche.png"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-row style="justify-content: center; text-align: center;">
+              <ion-col>
+                <ion-label>
+                  <h2>Talleres</h2>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-img src="assets/icon/coche.png"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-row style="justify-content: center; text-align: center;">
+              <ion-col>
+                <ion-label>
+                  <h2>Vehiculos</h2>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-img src="assets/icon/coche.png"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-row style="justify-content: center; text-align: center;">
+              <ion-col>
+                <ion-label>
+                  <h2>Talleres</h2>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-img src="assets/icon/mecanico.png"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </div>
 </ion-content>
